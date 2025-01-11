@@ -26,7 +26,7 @@ const MeetingModal = ({ open, setOpen }) => {
     const today = new Date().toISOString().split('T')[0];
     const [participantModalOpen, setParticipantModalOpen] = useState(false)
     const [participantDetails, setParticipantDetails] = useState([])
-    const [appointments, setAppointments] = useState([
+    const [appointments,] = useState([
         {
             id: 1,
             start_time: `${today}T09:00`,

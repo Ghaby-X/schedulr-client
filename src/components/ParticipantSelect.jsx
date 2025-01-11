@@ -63,7 +63,7 @@ const ParticipantSelectModal = ({ open, setOpen, setFormData, formData, setUserD
                                                     const isChecked = event.target.checked
 
                                                     let newFormDataParticipants;
-                                                    isChecked ? newFormDataParticipants = [...formData.participants, user.id] : newFormDataParticipants = formData.participants.filter(value => value != user.id)
+                                                    isChecked ? newFormDataParticipants = [...formData.participants, user.id] : newFormDataParticipants = formData.participants.filter(value => value !== user.id)
                                                     console.log(newFormDataParticipants)
                                                     setUserDetails(users.filter(user => newFormDataParticipants?.includes(user.id)))
                                                     setFormData({ ...formData, participants: newFormDataParticipants })
